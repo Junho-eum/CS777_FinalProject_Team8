@@ -77,8 +77,15 @@ This will start the classification process using the logistic regression model. 
 
 Test Accuracy: 0.9072718979253643
 ```
+This table shows the balanced distribution of labels in the dataset, indicating effective handling of class imbalance through oversampling. The '1' label indicates positive reviews, while the '0' label indicates negative reviews. The close counts of both labels show that the dataset has been balanced effectively.
 ```
 Label: 1, Prediction: 0.0, Probability: [0.6006160931251585,0.3993839068748415]
 Label: 1, Prediction: 0.0, Probability: [0.6006160931251585,0.3993839068748415]
 Label: 1, Prediction: 0.0, Probability: [0.6006160931251585,0.3993839068748415]
 ```
+These lines demonstrate individual predictions made by the model. Each entry shows the true label, the prediction made by the model, and the probability distribution between the classes. The probability values indicate how the model quantifies its decisions.
+
+
+
+
+
