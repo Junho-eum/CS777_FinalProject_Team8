@@ -29,7 +29,7 @@ You can access the dataset and learn more about it here: [UCSD Datasets - Amazon
 pip install nltk pandas pyspark
 ```
 
-### Data Preprocessing
+## Data Preprocessing
 
 The primary goal of preprocessing in our project was to refine the data from Amazon's reviews for sentiment analysis, specifically focusing on video games and beauty products. This step is crucial to enhance the quality and effectiveness of our analysis by cleaning and transforming the text data.
 
