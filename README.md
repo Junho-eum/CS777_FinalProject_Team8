@@ -13,20 +13,22 @@ The dataset is organized into two primary types: user reviews and product metada
 You can access the dataset and learn more about it here: [UCSD Datasets - Amazon Reviews](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews)
 
 #### Prerequisites
-- **Python**: Version 3.6 or newer.
-- **Apache Spark**: Spark 3.0 or newer is required to handle large-scale data processing.
-- **Java**: Java 8 or 11, required for running Spark.
-- **NLTK**: The Natural Language Toolkit for Python, used for text processing.
-- **Pandas**: For handling data manipulation in Python UDFs.
-- **Additional Python Libraries**: `re` for regular expressions, `pandas_udf` from PySpark.
+- Python: Version 3.6 or newer.
+- Apache Spark: Spark 3.0 or newer is required to handle large-scale data processing.
+- Java: Java 8 or 11, required for running Spark.
+- NLTK: The Natural Language Toolkit for Python, used for text processing.
+- Pandas: For handling data manipulation in Python UDFs.
+- Scikit-learn: Necessary for implementing the logistic regression model.
+- NumPy: For numerical operations.
+- Additional Python Libraries: re for regular expressions, pandas_udf from PySpark.
 
 #### Installation Steps
-1. **Install Python**: Ensure Python 3.6+ is installed on your system.
+1. **Install Python**: Ensure Python 3.8+ is installed on your system.
 2. **Install Java**: Java is needed to run Spark, install either version 8 or 11.
 3. **Download and Set Up Apache Spark**: Download Spark from the Apache website and configure it on your machine.
 4. **Set up Python Libraries**: Install the required Python libraries using pip:
 ```bash
-pip install nltk pandas pyspark
+pip install nltk pandas pyspark scikit-learn numpy
 ```
 
 ## Data Preprocessing
@@ -49,15 +51,19 @@ spark-submit --executor-memory 8G --driver-memory 4G Preprocess.py
 ```
 This command will execute the Preprocess.py script using Spark, which preprocesses the Amazon reviews data according to the defined schema and text processing functions described in the script.
 
+#### Logistic Regression Model
+The Logistic_Regression.py script uses logistic regression, an effective method for binary classification tasks like sentiment analysis of product reviews. In our project, reviews are labeled as positive or negative based on their star ratings. The script converts text into numerical data using TF-IDF (Term Frequency-Inverse Document Frequency), which helps emphasize important words and downplay the less informative ones that frequently occur.
 
+To tackle the issue of class imbalance common in review data, the script includes a step to oversample the minority class (negative reviews). This approach helps balance the dataset, enhancing the model's ability to perform well across different classes. The logistic regression model's performance is measured using several metrics including Precision, Recall, F1 Score, and AUC.
 
+#### Usage
+To run the logistic regression model, execute the Logistic_Regression.py script from the command line. This script will read the preprocessed data, apply the logistic regression model, and output the classification results along with performance metrics.
 
-
-
-
-
-
-
-
+#### Example
+- **Running the Preprocessing Script**:
+```bash
+python Logistic_Regression.py
+```
+This will start the classification process using the logistic regression model. The output will include accuracy metrics such as precision, recall, and F1-score, which help evaluate the effectiveness of the model in classifying the sentiment of the reviews.
 
 
