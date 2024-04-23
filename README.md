@@ -70,7 +70,42 @@ This script processes the review data stored in JSON format, using Apache Spark 
 - **Label Distribution**: Based on the polarity scores and user ratings, the script dynamically labels reviews as 'Positive' or 'Negative'. It also provides a count of reviews by sentiment label to analyze class balance.
 - **Word Frequency Analysis**: For both positive and negative sentiments, the script identifies and displays the top 20 frequent words, aiding in the understanding of common themes and expressions used in different sentiment contexts.
 
-#### Sample Output:
+### Example Output
+
+#### Polarity and Subjectivity Distribution Plot:
+![Polarity Distribution](Figures/polarity_distribution.png)
+![Polarity by Ratings](Figures/polarity_by_ratings.png)
+![Polarity and Subjectivity by Ratings](Figures/polarity_subjectivity_by_ratings.png)
+
+#### Descriptive Statistics Output:
+```plaintext
+Descriptive Statistics by Rating:
+           count      mean       std  min     25%     50%     75%  max
+rating                                                                
+1.0      52750.0 -0.020689  0.243912 -1.0 -0.1429  0.0000  0.1052  1.0
+2.0      26885.0  0.055138  0.216543 -1.0 -0.0533  0.0441  0.1722  1.0
+3.0      36181.0  0.108034  0.211177 -1.0  0.0000  0.0924  0.2188  1.0
+4.0      57386.0  0.173988  0.205374 -1.0  0.0433  0.1500  0.2800  1.0
+5.0     174825.0  0.263689  0.250348 -1.0  0.0917  0.2333  0.4000  1.0
+
+Quantiles for Each Rating:
+rating      
+1.0     0.25   -0.1429
+        0.50    0.0000
+        0.75    0.1052
+2.0     0.25   -0.0533
+        0.50    0.0441
+        0.75    0.1722
+3.0     0.25    0.0000
+        0.50    0.0924
+        0.75    0.2188
+4.0     0.25    0.0433
+        0.50    0.1500
+        0.75    0.2800
+5.0     0.25    0.0917
+        0.50    0.2333
+        0.75    0.4000
+```
 
 ## Logistic Regression Model
 The Logistic_Regression.py script uses logistic regression, an effective method for binary classification tasks like sentiment analysis of product reviews. In our project, reviews are labeled as positive or negative based on their star ratings. The script converts text into numerical data using TF-IDF (Term Frequency-Inverse Document Frequency), which helps emphasize important words and downplay the less informative ones that frequently occur.
