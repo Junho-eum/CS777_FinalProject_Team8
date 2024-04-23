@@ -107,6 +107,23 @@ rating
         0.75    0.4000
 ```
 
+## Sentiment Trend Analysis
+
+The `SentimentTrendPlottingAllFilesVideoGames.py` script provides an in-depth exploration and visualization of sentiment trends over time across video game reviews. This script uses the Plotly library to create interactive line plots that display changes in sentiment on a monthly and quarterly basis.
+
+### Key Features
+- **Time Series Analysis**: Converts Unix timestamps to standard datetime formats and aggregates data to illustrate sentiment trends over months and quarters.
+- **Interactive Visualizations**: Creates responsive, interactive visualizations using Plotly, which allows users to observe sentiment trends and explore specific time periods in detail.
+
+#### Example
+- **Running the Script**:
+```bash
+python SentimentTrendPlottingAllFilesVideoGames.py
+```
+
+### Example Output
+![Polarity by Ratings](Figures/polarity_by_ratings.png)
+
 ## Logistic Regression Model
 The Logistic_Regression.py script uses logistic regression, an effective method for binary classification tasks like sentiment analysis of product reviews. In our project, reviews are labeled as positive or negative based on their star ratings. The script converts text into numerical data using TF-IDF (Term Frequency-Inverse Document Frequency), which helps emphasize important words and downplay the less informative ones that frequently occur.
 
