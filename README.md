@@ -122,7 +122,7 @@ python SentimentTrendPlottingAllFilesVideoGames.py
 ```
 
 ### Example Output
-![Polarity by Ratings](Figures/polarity_by_ratings.png)
+![Polarity by Ratings](Figures/VideoGameProducts.png)
 
 ## Logistic Regression Model
 The Logistic_Regression.py script uses logistic regression, an effective method for binary classification tasks like sentiment analysis of product reviews. In our project, reviews are labeled as positive or negative based on their star ratings. The script converts text into numerical data using TF-IDF (Term Frequency-Inverse Document Frequency), which helps emphasize important words and downplay the less informative ones that frequently occur.
