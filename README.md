@@ -107,7 +107,7 @@ rating
         0.75    0.4000
 ```
 
-## Sentiment Trend Analysis
+## Exploratory Data Analysis (EDA) - Sentiment Trend Analysis
 
 The `SentimentTrendPlottingAllFilesVideoGames.py` script provides an in-depth exploration and visualization of sentiment trends over time across video game reviews. This script uses the Plotly library to create interactive line plots that display changes in sentiment on a monthly and quarterly basis.
 
