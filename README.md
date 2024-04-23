@@ -12,3 +12,19 @@ The dataset is organized into two primary types: user reviews and product metada
 
 You can access the dataset and learn more about it here: [UCSD Datasets - Amazon Reviews](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews)
 
+#### Prerequisites
+- **Python**: Version 3.6 or newer.
+- **Apache Spark**: Spark 3.0 or newer is required to handle large-scale data processing.
+- **Java**: Java 8 or 11, required for running Spark.
+- **NLTK**: The Natural Language Toolkit for Python, used for text processing.
+- **Pandas**: For handling data manipulation in Python UDFs.
+- **Additional Python Libraries**: `re` for regular expressions, `pandas_udf` from PySpark.
+
+#### Installation Steps
+1. **Install Python**: Ensure Python 3.6+ is installed on your system.
+2. **Install Java**: Java is needed to run Spark, install either version 8 or 11.
+3. **Download and Set Up Apache Spark**: Download Spark from the Apache website and configure it on your machine.
+4. **Set up Python Libraries**: Install the required Python libraries using pip:
+   ```bash
+   pip install nltk pandas pyspark
+   ```
