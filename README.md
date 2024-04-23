@@ -126,7 +126,34 @@ AUC: 0.9353
 ```
 
 ## Naive Bayes Model
+The `Naive_Bayes.py` script employs the Naive Bayes classifier, a popular probabilistic model well-suited for binary classification tasks in text analytics. 
 
+### Overview
+The script processes text data by transforming it into numerical features using a combination of tokenization, HashingTF, and IDF (Inverse Document Frequency) transformations. The Naive Bayes model is particularly effective in this context due to its assumption of independence between features, making it adept at handling text data.
+
+### Usage
+To execute the Naive Bayes model script, run the following command in the terminal:
+
+```bash
+python Naive_Bayes.py <data_path> <output_dir>
+```
+This command requires two arguments:
+- <data_path>: The path to the input data in JSON format.
+- <output_dir>: The directory where the output metrics will be saved.
+
+#### Sample Output
+```plaintext
+Label: 1, Prediction: 1.0, Probability: [0.49991837115469817,0.5000816288453018]
+Label: 1, Prediction: 1.0, Probability: [0.49991837115469817,0.5000816288453018]
+Label: 1, Prediction: 1.0, Probability: [0.49991837115469817,0.5000816288453018]
+```
+```plaintext
+Accuracy: 0.5090
+Precision: 0.8045
+Recall: 0.8032
+F1 Score: 0.8011
+AUC: 0.5632
+```
 
 
 
