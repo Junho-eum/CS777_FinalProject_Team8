@@ -68,12 +68,12 @@ This will start the classification process using the logistic regression model. 
 
 #### Sample Output:
 ```plaintext
-+-----+------+
-|label| count|
-+-----+------+
-|    1|187379|
-|    0|187307|
-+-----+------+
++-----+-------+
+|label|  count|
++-----+-------+
+|    1|1262443|
+|    0|1262148|
++-----+-------+
 
 Test Accuracy: 0.9072718979253643
 ```
@@ -85,7 +85,46 @@ Label: 1, Prediction: 0.0, Probability: [0.6006160931251585,0.3993839068748415]
 ```
 These lines demonstrate individual predictions made by the model. Each entry shows the true label, the prediction made by the model, and the probability distribution between the classes. The probability values indicate how the model quantifies its decisions.
 
+## Linear SVM Model
 
+The `Linear_SVM.py` script applies a Linear Support Vector Machine (SVM), a powerful method for binary classification tasks, particularly suited to high-dimensional data such as text. This script is part of our sentiment analysis project where reviews are classified as positive or negative. The classification relies on transforming review text into numerical vectors using TF-IDF (Term Frequency-Inverse Document Frequency), which highlights significant terms while minimizing the influence of frequent but less informative terms. The performance of the Linear SVM model is evaluated using key metrics including Precision, Recall, F1 Score, and AUC.
+
+### Usage
+To run the Linear SVM model, execute the `Linear_SVM.py` script. This script processes the preprocessed data, applies the Linear SVM model, and outputs the classification results along with performance metrics.
+
+### Example
+- **Running the Script**:
+```bash
+python Linear_SVM.py
+```
+This command triggers the classification process using the Linear SVM model. The results displayed include key performance metrics such as Precision, Recall, and F1-Score.
+
+## Sample Output
+
+The `Linear_SVM.py` script classifies reviews into 'Positive' or 'Negative' sentiments based on the text's sentiment score derived from ratings and TextBlob analysis. Below is a sample of the output produced by the script, showing the sentiment classification alongside the original ratings and computed sentiment attributes:
+
+```plaintext
++------+--------------------+--------+------------+---------------+---------+
+|rating|                text|polarity|subjectivity|sentiment_score|sentiment|
++------+--------------------+--------+------------+---------------+---------+
+|   1.0|    came usb connect|     0.0|         0.0|              0| Negative|
+|   4.0|quality pretty go...|    0.25|         0.8|              1| Positive|
+|   5.0|                    |     0.0|         0.0|              1| Positive|
+|   2.0|know near end cur...|  0.1829|      0.3921|              0| Negative|
+|   5.0|update downloaded...|   0.282|      0.5562|              1| Positive|
+|   1.0|satisfied happy t...|    0.65|         1.0|              0| Negative|
+|   4.0|charge last long ...|    0.25|      0.4056|              1| Positive|
++------+--------------------+--------+------------+---------------+---------+
+```
+- Performance Metrics
+After classification, the model's performance is evaluated on several key metrics:
+```plaintext
+Accuracy: 0.8694
+Precision: 0.8697
+Recall: 0.8694
+F1 Score: 0.8694
+AUC: 0.9353
+```
 
 
 
