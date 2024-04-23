@@ -10,4 +10,5 @@ For our sentiment analysis, we utilized the Amazon Reviews dataset available fro
 
 The dataset is organized into two primary types: user reviews and product metadata, which are linked using the ASIN product identifier. By merging these two datasets, we created a unified dataset that is ideal for conducting detailed sentiment analysis and big data tasks.
 
-You can access the dataset and learn more about it here: UCSD Datasets - Amazon Reviews.
+You can access the dataset and learn more about it here: [UCSD Datasets - Amazon Reviews](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews)
+
