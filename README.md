@@ -13,10 +13,9 @@ The dataset is organized into two primary types: user reviews and product metada
 You can access the dataset and learn more about it here: [UCSD Datasets - Amazon Reviews](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews)
 
 Additionally, the preprocessed version of this dataset is stored and accessible in an AWS S3 bucket.
-
 Preprocessed data can be accessed at the following S3 location:
 ```plaintext
-arn:aws:s3:::preprocessedreviewdata
+aws s3 cp s3://preprocessedreviewdata/part-00000-5eaf89fa-75fc-4633-ab39-87d2a8214a9e-c000.json <your_local_path>
 ```
 
 #### Prerequisites
