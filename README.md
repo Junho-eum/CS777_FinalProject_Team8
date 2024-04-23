@@ -41,9 +41,12 @@ We merged the reviews DataFrame with the metadata DataFrame using the 'parent_as
 The preprocessing steps included converting text to lowercase, removing non-alphanumeric characters, tokenizing the text, and removing common stop words. These steps are implemented in a custom script, `Preprocess.py`, which is designed to run efficiently on large datasets using Apache Spark.
 
 #### Usage
-##### How to Run the Project
 - **Script Execution**: To preprocess the data, run the Preprocess.py script. This script will perform all necessary preprocessing steps on the dataset and prepare it for sentiment analysis.
-
+##### Example
+- **Running the Preprocessing Script**:
+```bash
+spark-submit --executor-memory 8G --driver-memory 4G Preprocess.py
+```
 
 
 
