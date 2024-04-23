@@ -125,5 +125,8 @@ F1 Score: 0.8694
 AUC: 0.9353
 ```
 
+## Naive Bayes Model
+
+
 
 
