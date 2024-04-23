@@ -12,6 +12,13 @@ The dataset is organized into two primary types: user reviews and product metada
 
 You can access the dataset and learn more about it here: [UCSD Datasets - Amazon Reviews](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews)
 
+Additionally, the preprocessed version of this dataset is stored and accessible in an AWS S3 bucket.
+
+Preprocessed data can be accessed at the following S3 location:
+```plaintext
+arn:aws:s3:::preprocessedreviewdata
+```
+
 #### Prerequisites
 - Python: Version 3.6 or newer.
 - Apache Spark: Spark 3.0 or newer is required to handle large-scale data processing.
