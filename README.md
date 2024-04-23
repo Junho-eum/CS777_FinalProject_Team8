@@ -47,6 +47,9 @@ The preprocessing steps included converting text to lowercase, removing non-alph
 ```bash
 spark-submit --executor-memory 8G --driver-memory 4G Preprocess.py
 ```
+This command will execute the Preprocess.py script using Spark, which preprocesses the Amazon reviews data according to the defined schema and text processing functions described in the script.
+
+
 
 
 
