@@ -60,7 +60,7 @@ To tackle the issue of class imbalance common in review data, the script include
 To run the logistic regression model, execute the Logistic_Regression.py script from the command line. This script will read the preprocessed data, apply the logistic regression model, and output the classification results along with performance metrics.
 
 #### Example
-- **Running the Preprocessing Script**:
+- **Running the Script**:
 ```bash
 python Logistic_Regression.py
 ```
