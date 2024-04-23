@@ -99,7 +99,7 @@ python Linear_SVM.py
 ```
 This command triggers the classification process using the Linear SVM model. The results displayed include key performance metrics such as Precision, Recall, and F1-Score.
 
-## Sample Output
+#### Sample Output
 
 The `Linear_SVM.py` script classifies reviews into 'Positive' or 'Negative' sentiments based on the text's sentiment score derived from ratings and TextBlob analysis. Below is a sample of the output produced by the script, showing the sentiment classification alongside the original ratings and computed sentiment attributes:
 
