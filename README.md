@@ -116,8 +116,7 @@ The `Linear_SVM.py` script classifies reviews into 'Positive' or 'Negative' sent
 |   4.0|charge last long ...|    0.25|      0.4056|              1| Positive|
 +------+--------------------+--------+------------+---------------+---------+
 ```
-- Performance Metrics
-After classification, the model's performance is evaluated on several key metrics:
+The model's performance is evaluated on several key metrics:
 ```plaintext
 Accuracy: 0.8694
 Precision: 0.8697
