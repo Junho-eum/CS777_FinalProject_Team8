@@ -25,6 +25,19 @@ You can access the dataset and learn more about it here: [UCSD Datasets - Amazon
 2. **Install Java**: Java is needed to run Spark, install either version 8 or 11.
 3. **Download and Set Up Apache Spark**: Download Spark from the Apache website and configure it on your machine.
 4. **Set up Python Libraries**: Install the required Python libraries using pip:
-   ```bash
-   pip install nltk pandas pyspark
-   ```
+```bash
+pip install nltk pandas pyspark
+```
+
+### Data Preprocessing
+
+The primary goal of preprocessing in our project was to refine the data from Amazon's reviews for sentiment analysis, specifically focusing on video games and beauty products. This step is crucial to enhance the quality and effectiveness of our analysis by cleaning and transforming the text data.
+
+#### Process Overview
+After loading user reviews and product metadata from JSONL files into separate Spark DataFrames, we first addressed conflicts in column names (e.g., both DataFrames had 'title' and 'images' columns). To resolve these, we renamed them to 'review_title', 'meta_title', and 'meta_images' for clarity.
+
+We merged the reviews DataFrame with the metadata DataFrame using the 'parent_asin' column, enriching the review data with corresponding product metadata. This merging is essential for creating a richer feature set for our models.
+
+The preprocessing steps included converting text to lowercase, removing non-alphanumeric characters, tokenizing the text, and removing common stop words. These steps are implemented in a custom script, `Preprocess.py`, which is designed to run efficiently on large datasets using Apache Spark.
+
+
