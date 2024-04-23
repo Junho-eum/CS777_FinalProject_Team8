@@ -57,6 +57,21 @@ spark-submit --executor-memory 8G --driver-memory 4G Preprocess.py
 ```
 This command will execute the Preprocess.py script using Spark, which preprocesses the Amazon reviews data according to the defined schema and text processing functions described in the script.
 
+## Exploratory Data Analysis (EDA) - Label Distribution Analysis
+
+The `Label_Distribution_Analysis.py` script conducts a exploratory data analysis on video game review data. This script is important for understanding the underlying patterns and distributions in the sentiment and subjectivity of the text data.
+
+### Overview
+This script processes the review data stored in JSON format, using Apache Spark for scalable data operations. It leverages TextBlob for sentiment and subjectivity analysis and employs visualization libraries like Matplotlib and Seaborn.
+
+### Key Features
+- **Sentiment and Subjectivity Analysis**: The script calculates the polarity and subjectivity of each review using TextBlob, a simple NLP tool ideal for these tasks.
+- **Data Visualization**: It generates various plots such as histograms, box plots, and scatter plots to visualize the distribution of polarity scores, subjectivity, and their relationship with user ratings.
+- **Label Distribution**: Based on the polarity scores and user ratings, the script dynamically labels reviews as 'Positive' or 'Negative'. It also provides a count of reviews by sentiment label to analyze class balance.
+- **Word Frequency Analysis**: For both positive and negative sentiments, the script identifies and displays the top 20 frequent words, aiding in the understanding of common themes and expressions used in different sentiment contexts.
+
+#### Sample Output:
+
 ## Logistic Regression Model
 The Logistic_Regression.py script uses logistic regression, an effective method for binary classification tasks like sentiment analysis of product reviews. In our project, reviews are labeled as positive or negative based on their star ratings. The script converts text into numerical data using TF-IDF (Term Frequency-Inverse Document Frequency), which helps emphasize important words and downplay the less informative ones that frequently occur.
 
