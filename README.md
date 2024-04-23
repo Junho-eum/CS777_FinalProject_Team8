@@ -66,4 +66,19 @@ python Logistic_Regression.py
 ```
 This will start the classification process using the logistic regression model. The output will include accuracy metrics such as precision, recall, and F1-score, which help evaluate the effectiveness of the model in classifying the sentiment of the reviews.
 
+#### Sample Output:
+```plaintext
++-----+------+
+|label| count|
++-----+------+
+|    1|187379|
+|    0|187307|
++-----+------+
 
+Test Accuracy: 0.9072718979253643
+```
+```
+Label: 1, Prediction: 0.0, Probability: [0.6006160931251585,0.3993839068748415]
+Label: 1, Prediction: 0.0, Probability: [0.6006160931251585,0.3993839068748415]
+Label: 1, Prediction: 0.0, Probability: [0.6006160931251585,0.3993839068748415]
+```
